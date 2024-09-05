@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price Predictor</title>
+    <style>
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+    background-color: white;
+    padding: 30px; /* Increased padding for more space inside */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 2000px; /* Increased max-width for more space */
+    width: 100%;       /* Responsive width */
+    min-height: 100px; /* Set a minimum height for the container */
+    box-sizing: border-box; /* Include padding in width and height calculations */
+}
+
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-group .input-group {
+            width: 100%;
+            max-width: calc(33.333% - 10px); /* Adjust for three items per row with spacing */
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diamond Price Predictor</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="carat">Carat:</label>
+                    <input type="text" id="carat" name="carat" placeholder="e.g., 1.52" required>
+                    <small>Carat (ct.): The weight of the diamond.</small>
+                </div>
+                <div class="input-group">
+                    <label for="cut">Cut:</label>
+                    <select id="cut" name="cut">
+                        <option value="Fair">Fair</option>
+                        <option value="Good">Good</option>
+                        <option value="Very Good">Very Good</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Ideal">Ideal</option>
+                    </select>
+                    <small>Quality of Diamond Cut.</small>
+                </div>
+                <div class="input-group">
+                    <label for="color">Color:</label>
+                    <select id="color" name="color">
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="I">I</option>
+                        <option value="J">J</option>
+                    </select>
+                    <small>Color of Diamond.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="clarity">Clarity:</label>
+                    <select id="clarity" name="clarity">
+                        <option value="IF">IF</option>
+                        <option value="VVS1">VVS1</option>
+                        <option value="VVS2">VVS2</option>
+                        <option value="VS1">VS1</option>
+                        <option value="VS2">VS2</option>
+                        <option value="SI1">SI1</option>
+                        <option value="SI2">SI2</option>
+                        <option value="I1">I1</option>
+                    </select>
+                    <small>Clarity: Purity of the diamond.</small>
+                </div>
+                <div class="input-group">
+                    <label for="depth">Depth (%):</label>
+                    <input type="text" id="depth" name="depth" placeholder="e.g., 62.2" required>
+                    <small>Depth: Height from the bottom tip to the top surface.</small>
+                </div>
+                <div class="input-group">
+                    <label for="table">Table (%):</label>
+                    <input type="text" id="table" name="table" placeholder="e.g., 58.0" required>
+                    <small>Table: Width of the largest facet on the diamond's top.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="x">X (mm):</label>
+                    <input type="text" id="x" name="x" placeholder="e.g., 7.27" required>
+                    <small>X Dimension: Width of the diamond in millimeters.</small>
+                </div>
+                <div class="input-group">
+                    <label for="y">Y (mm):</label>
+                    <input type="text" id="y" name="y" placeholder="e.g., 7.33" required>
+                    <small>Y Dimension: Depth of the diamond from front to back.</small>
+                </div>
+                <div class="input-group">
+                    <label for="z">Z (mm):</label>
+                    <input type="text" id="z" name="z" placeholder="e.g., 4.55" required>
+                    <small>Z Dimension: Height of the diamond from table to culet.</small>
+                </div>
+            </div>
+
+            <button type="submit">Predict Price</button>
+        </form>
+        {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
