@@ -1,1 +1,1 @@
-# Gemstone price Prediction (Bid Data Analysis)
+# Gemstone price Prediction (Big Data Analysis)
