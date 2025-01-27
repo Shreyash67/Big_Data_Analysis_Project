@@ -1,7 +1,9 @@
 # Big Data Analysis: Gemstone Price Prediction
 
-### Project Overview
+## Project Overview
 This project focuses on predicting gemstone prices based on various attributes such as weight, clarity, and color. The goal was to leverage machine learning techniques to build a predictive model that can accurately forecast the price of gemstones.
+
+![Gemstone Price Prediction](path_to_image.png) 
 
 ### Technologies Used
 - **Python**
