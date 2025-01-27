@@ -3,7 +3,7 @@
 ## Project Overview
 This project focuses on predicting gemstone prices based on various attributes such as weight, clarity, and color. The goal was to leverage machine learning techniques to build a predictive model that can accurately forecast the price of gemstones.
 
-![Gemstone Price Prediction](path_to_image.png) 
+![Gemstone Price Prediction](https://www.google.com/imgres?q=gemstone%20price%20preddiction&imgurl=https%3A%2F%2Fwww.calderagem.com%2Fcdn%2Fshop%2Farticles%2FGemstone_of_the_Year.png%3Fv%3D1708457707%26width%3D1024&imgrefurl=https%3A%2F%2Fwww.calderagem.com%2Fblogs%2Fnews%2Fmost-popular-gemstones-2024&docid=33-V_6Rt7A8D4M&tbnid=G6EBywTMNa8qCM&vet=12ahUKEwjsseS70paLAxUhjGMGHcK-Hl0QM3oECFMQAA..i&w=1024&h=576&hcb=2&ved=2ahUKEwjsseS70paLAxUhjGMGHcK-Hl0QM3oECFMQAA) 
 
 ### Technologies Used
 - **Python**
