@@ -42,3 +42,4 @@ The performance of the model was evaluated using the R² score, with the final m
 
 ### Conclusion
 The project demonstrates how big data analysis techniques can be used to predict gemstone prices with a high level of accuracy. The model can be further improved by experimenting with other regression algorithms and incorporating more advanced feature engineering techniques.
+
